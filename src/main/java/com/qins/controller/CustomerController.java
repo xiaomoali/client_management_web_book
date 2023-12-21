@@ -1,27 +1,21 @@
 package com.qins.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
-import java.util.Date;
+import com.qins.dao.CustomerMapper;
+import com.qins.pojo.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@RestController
+@RequestMapping("/customer")
 public class CustomerController {
-    private Integer id;
-    private String cname;
-    private String category;
-    private String phoneNumber;
-    private String email;
-    private String address;
-    private String region;
-    private String manager;
-    private Date registrationDate;
-    private Timestamp lastDealTime;
-    private String remark;
-
+    @Autowired
+    CustomerMapper customerMapper;
+    @PutMapping("add")
+    public String add(Customer customer){
+        return ""+customerMapper.add(customer);
+    }
 
 }
