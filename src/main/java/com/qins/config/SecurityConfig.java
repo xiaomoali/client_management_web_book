@@ -13,7 +13,7 @@ public class SecurityConfig implements WebMvcConfigurer {
 
 
 
-    @RequestMapping({"/","/index.html"})
+    @RequestMapping("/index")
     public String index(){
         return "index";
     }

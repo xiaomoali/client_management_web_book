@@ -11,8 +11,8 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 public class SecurityController {
 
 
-    @RequestMapping ("/index")
-    public String login( ){
-        return "index";
-    }
+//    @RequestMapping ("/index")
+//    public String login( ){
+//        return "index";
+//    }
 }
