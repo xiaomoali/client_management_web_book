@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @ResponseBody
-public class he {
+public class SecurityController {
 
-    @GetMapping("/he")
-    public String hello(){
-        return "ok";
+    @RequestMapping ("/index")
+    public String login(){
+        return "index";
     }
 }
